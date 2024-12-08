@@ -21,7 +21,7 @@ export default function Navbar() {
                             className="h-9 w-auto md:h-auto"
                         />
                     </div>
-                    <div className="flex justify-center items-center">
+                    <div className="lg:flex justify-center items-center hidden">
                         <nav className="flex gap-6 font-medium">
                             {navLinks.map((link) => (
                                 <a href={link.href} key={link.label}>
@@ -48,10 +48,18 @@ export default function Navbar() {
                             <line x1="3" y1="6" x2="21" y2="6"></line>
                             <line x1="3" y1="18" x2="21" y2="18"></line>
                         </svg>
-                        <Button variant="secondary" className="">
+                        <Button
+                            variant="secondary"
+                            className="hidden md:inline-flex items-center"
+                        >
                             Log In
                         </Button>
-                        <Button variant="primary">Sign Up</Button>
+                        <Button
+                            variant="primary"
+                            className="hidden md:inline-flex items-center"
+                        >
+                            Sign Up
+                        </Button>
                     </div>
                 </div>
             </div>
